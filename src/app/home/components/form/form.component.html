@@ -1,0 +1,40 @@
+<form [formGroup]="form" (ngSubmit)="save($event)">
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input type="text" matInput formControlName="nombre"
+           placeholder="Ingresa tu nombre">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Apellido Paterno</mat-label>
+      <input type="text" matInput formControlName="apellidoPaterno"
+             placeholder="Ingresa tu Apellido Paterno">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Apellido Materno</mat-label>
+        <input type="text" matInput formControlName="apellidoMaterno"
+               placeholder="Ingresa tu Apellido Materno">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email"
+                 placeholder="Ingresa tu email">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Peso</mat-label>
+            <input type="number" matInput formControlName="peso"
+                   placeholder="Ingresa tu Peso">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Altura</mat-label>
+              <input type="number" matInput formControlName="altura"
+                     placeholder="Ingresa tu Altura">
+              </mat-form-field>
+
+              <button type="submit" mat-raised-button color="primary">Enviar</button>
+
+</form>
