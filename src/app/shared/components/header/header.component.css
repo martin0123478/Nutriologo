@@ -1,0 +1,23 @@
+.header-image{
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-width: 320px;
+  
+  height: 100px;
+  text-align: center;
+  background-color: #100E1D;
+}
+
+.header-logo{
+  /* display: block;
+  width: 70px;
+  height: 60px;
+  margin-top: 5px;
+  margin: auto; */
+  width: 150px;
+  height: 95px;
+  margin-top: 5px;
+  align-self: center;
+}
+
