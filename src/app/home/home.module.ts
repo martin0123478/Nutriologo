@@ -6,10 +6,12 @@ import { HomeComponent } from './components/home/home.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { ServicesComponent } from './components/services/services.component';
 import { FormComponent } from './components/form/form.component';
-import{MaterialModule} from '../material/material.module'
+import{MaterialModule} from '../material/material.module';
+import { RecomedationComponent } from './components/recomedation/recomedation.component';
+import { CalltoactionComponent } from './components/calltoaction/calltoaction.component'
 
 @NgModule({
-  declarations: [HomeComponent, HeroComponent, ServicesComponent, FormComponent],
+  declarations: [HomeComponent, HeroComponent, ServicesComponent, FormComponent, RecomedationComponent, CalltoactionComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

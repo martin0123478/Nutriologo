@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
-
+.contenedor {
+  max-width: 100rem;
+  width: 90%;
+  margin: 0 auto;
+}
 .servicios-container{
   width: 100%;
   min-width: 320px;
@@ -8,6 +12,11 @@
   text-align: center;
   margin-top: 15px;
   
+}
+img{
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
 }
 
 .servicio{
