@@ -23,6 +23,26 @@
                  placeholder="Ingresa tu email">
           </mat-form-field>
 
+              <!-- <mat-radio-group aria-label="Sexo">
+              <mat-radio-button formControlName="sexo" value="femenino">Femenino</mat-radio-button>
+              <mat-radio-button formControlName="sexo" value="masculino">Femenino</mat-radio-button>
+              
+            </mat-radio-group> -->
+            <label for="">
+
+              <input name="gender" type="radio" value="Masculino" formControlName="gender">
+              Masculino
+            </label>
+          
+            <label for="">
+          
+              <input name="gender" type="radio" value="Femenino" formControlName="gender">
+              Femenino
+            </label>
+
+            
+            
+
           <mat-form-field>
             <mat-label>Peso</mat-label>
             <input type="number" matInput formControlName="peso"
