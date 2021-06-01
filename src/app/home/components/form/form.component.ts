@@ -44,54 +44,55 @@ form:FormGroup;
   private reglas(imc,sexo){
     if(imc < 18.5 && sexo==='Masculino'){
       this.router.navigate(['/peso-bajo-h'])
-    }else
-
-    if(imc < 18.5 && sexo==='Femenino'){
-      this.router.navigate(['/peso-bajo-m'])
-    }else
-
-    if ( imc>=18.5 || imc<=24.9 && sexo==='Masculino'){
-      this.router.navigate(['/peso-normal-h'])
-    }else
-
-    if ( imc>=18.5 || imc<=24.9 && sexo==='Femenino'){
-      this.router.navigate(['/peso-normal-m'])
-    }else
-
-    if ( imc>=25.0 || imc<=29.9 && sexo==='Masculino'){
-      this.router.navigate(['/sobre-peso-h'])
-    }else
-
-    if ( imc>=25.0 || imc<=29.9 && sexo==='Femenino'){
-      this.router.navigate(['/sobre-peso-m'])
-    }else
-
-    if ( imc>=30.0 || imc<=34.5 && sexo==='Masculino'){
-      this.router.navigate(['/obesidad1-h'])
-    }else
-
-    if ( imc>=30.0 || imc<=34.5 && sexo==='Femenino'){
-      this.router.navigate(['/obesidad1-m'])
-    }else
-
-    if ( imc>=35.0 || imc<=9.0 && sexo==='Masculino'){
-      this.router.navigate(['/obesidad2-h'])
-    }else
-
-    if ( imc>=35.0 || imc<=9.0 && sexo==='Femenino'){
-      this.router.navigate(['/obesidad2-m'])
-    }else
-
-    if ( imc>40 && sexo==='Masculino'){
-      this.router.navigate(['/obesidad3-h'])
-    }else
-
-    
-    if ( imc>40 && sexo==='Femenino'){
-      this.router.navigate(['/obesidad3-m'])
+    }else{
+      if(imc < 18.5 && sexo==='Femenino'){
+        this.router.navigate(['/peso-bajo-m'])
+      }else{
+        if ( imc>=18.5 || imc<=24.9 && sexo==='Masculino'){
+          this.router.navigate(['/peso-normal-h'])
+        }else{
+          if ( imc>=18.5 || imc<=24.9 && sexo==='Femenino'){
+            this.router.navigate(['/peso-normal-m'])
+          }else{
+            if ( imc>=25.0 || imc<=29.9 && sexo==='Masculino'){
+              this.router.navigate(['/sobre-peso-h'])
+            }else{
+              if ( imc>=25.0 || imc<=29.9 && sexo==='Femenino'){
+                this.router.navigate(['/sobre-peso-m'])
+              }else{
+                if ( imc>=30.0 || imc<=34.5 && sexo==='Masculino'){
+                  this.router.navigate(['/obesidad1-h'])
+                }else{
+                  if ( imc>=30.0 || imc<=34.5 && sexo==='Femenino'){
+                    this.router.navigate(['/obesidad1-m'])
+                  }else{
+                    if ( imc>=35.0 || imc<=9.0 && sexo==='Masculino'){
+                      this.router.navigate(['/obesidad2-h'])
+                    }else{
+                      if ( imc>=35.0 || imc<=9.0 && sexo==='Femenino'){
+                        this.router.navigate(['/obesidad2-m'])
+                      }else{
+                        if ( imc>40 && sexo==='Masculino'){
+                          this.router.navigate(['/obesidad3-h'])
+                        }else{
+                          if ( imc>40 && sexo==='Femenino'){
+                            this.router.navigate(['/obesidad3-m'])
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
+    
 
+    
   }
   
 

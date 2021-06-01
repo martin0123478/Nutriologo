@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import {MatTableModule} from '@angular/material/table';
 import { Obesidad3HRoutingModule } from './obesidad3-h-routing.module';
 import { Obesidad3Component } from './components/obesidad3/obesidad3.component';
 import { InformacionComponent } from './components/informacion/informacion.component';
@@ -12,7 +12,8 @@ import{SharedModule} from '../shared/shared.module'
   imports: [
     CommonModule,
     Obesidad3HRoutingModule,
-    SharedModule
+    SharedModule,
+    MatTableModule
   ]
 })
 export class Obesidad3HModule { }
