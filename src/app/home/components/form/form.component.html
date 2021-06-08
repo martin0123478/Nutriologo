@@ -3,31 +3,63 @@
     <mat-label>Nombre</mat-label>
     <input type="text" matInput formControlName="nombre"
            placeholder="Ingresa tu nombre">
+    <div *ngIf="nombreField.touched && nombreField.invalid">
+      <mat-error *ngIf="nombreField.hasError('required')">
+          Este campo es requerido
+      </mat-error>
+
+      <mat-error *ngIf="nombreField.hasError('pattern')">
+        El nombre no debe tener números
+    </mat-error>
+    
+    </div>
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Apellido Paterno</mat-label>
       <input type="text" matInput formControlName="apellidoPaterno"
-             placeholder="Ingresa tu Apellido Paterno">
-      </mat-form-field>
+            placeholder="Ingresa tu Apellido Paterno">
+    <div *ngIf="apellidopField.touched && apellidopField.invalid">
+      <mat-error *ngIf="apellidopField.hasError('required')">
+          Este campo es requerido
+      </mat-error>
+      <mat-error *ngIf="apellidopField.hasError('pattern')">
+        El Apellido Paterno no debe tener números
+    </mat-error>
+    
+      </div>
+    </mat-form-field>
 
       <mat-form-field>
         <mat-label>Apellido Materno</mat-label>
         <input type="text" matInput formControlName="apellidoMaterno"
                placeholder="Ingresa tu Apellido Materno">
-        </mat-form-field>
+      <div *ngIf="apellidomField.touched && apellidomField.invalid">
+        <mat-error *ngIf="apellidomField.hasError('required')">
+          Este campo es requerido
+        </mat-error>
+        <mat-error *ngIf="apellidomField.hasError('pattern')">
+          El Apellido Materno no debe tener números
+      </mat-error>
+      </div>
+      </mat-form-field>
 
         <mat-form-field>
           <mat-label>Email</mat-label>
           <input type="email" matInput formControlName="email"
                  placeholder="Ingresa tu email">
-          </mat-form-field>
+        <div *ngIf="emailField.touched && emailField.invalid">
+          <mat-error *ngIf="emailField.hasError('required')">
+          Este campo es requerido
+          </mat-error>
+          <mat-error *ngIf="emailField.hasError('email')">
+          No es un email
+          </mat-error>
 
-              <!-- <mat-radio-group aria-label="Sexo">
-              <mat-radio-button formControlName="sexo" value="femenino">Femenino</mat-radio-button>
-              <mat-radio-button formControlName="sexo" value="masculino">Femenino</mat-radio-button>
-              
-            </mat-radio-group> -->
+          
+        </div>
+        </mat-form-field>
+
             <label for="">
 
               <input name="gender" type="radio" value="Masculino" formControlName="gender">
@@ -46,15 +78,26 @@
           <mat-form-field>
             <mat-label>Peso</mat-label>
             <input type="number" matInput formControlName="peso"
-                   placeholder="Ingresa tu Peso">
+                   placeholder="Ingresa tu Peso en kilogramos">
+          <div *ngIf="pesoField.touched && pesoField.invalid">
+            <mat-error *ngIf="pesoField.hasError('required')">
+            Este campo es requerido
+            </mat-error>
+        </div>
             </mat-form-field>
 
-            <mat-form-field>
-              <mat-label>Altura</mat-label>
-              <input type="number" matInput formControlName="altura"
-                     placeholder="Ingresa tu Altura">
-              </mat-form-field>
+          <mat-form-field>
+             <mat-label>Altura</mat-label>
+          <input type="number" matInput formControlName="altura"
+               placeholder="Ingresa tu Altura en metros">
+          <div *ngIf="alturaField.touched && alturaField.invalid">
+            <mat-error *ngIf="alturaField.hasError('required')">
+            Este campo es requerido
+            </mat-error>
+          
+        </div>
+            </mat-form-field>
 
-              <button type="submit" mat-raised-button color="primary">Enviar</button>
+    <button type="submit" mat-raised-button color="primary">Enviar</button>
 
 </form>
