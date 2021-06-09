@@ -12,7 +12,7 @@ export class PacientService {
     return this.http.post('http://localhost:3000/create',pacient)
   }
   getFile(){
-    return this.http.get('assets/files/Manual-de-Usuario.pdf',{responseType:'text'})
+    return this.http.get('assets/files/Manual-de-Usuario.pdf',{responseType:'blob'})
   }
 
 }

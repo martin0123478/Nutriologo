@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PacientService} from '../../../core/services/pacient.service';
-import * as FileSaver from 'file-saver';
+import * as FileSaver from 'file-saver'
+
 @Component({
   selector: 'app-file',
   templateUrl: './file.component.html',
@@ -14,12 +15,11 @@ export class FileComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+ 
   getFile() {
-    this.service.getFile()
-      .subscribe(content => {
-        var blob = new Blob([content], {type: 'text/plain;charset=utf-8'});
-        FileSaver.saveAs(blob, 'Manual-de-Usuario.pdf');
-      });
+    this.service.getFile().subscribe(file => FileSaver.saveAs(file, 'Manual-de-Usuario.pdf'));
   }
+
 
 }
